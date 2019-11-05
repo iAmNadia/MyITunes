@@ -107,12 +107,12 @@
 			path = Submodul;
 			sourceTree = "<group>";
 		};
-		5C90638F236DE65F00281145 /* Ineractor */ = {
+		5C90638F236DE65F00281145 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				5C90638D236DE64000281145 /* SearchInteractor.swift */,
 			);
-			path = Ineractor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		5C906390236DE6BC00281145 /* Router */ = {
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				F8A97B3622498F0C00FB2C0E /* View */,
-				5C90638F236DE65F00281145 /* Ineractor */,
+				5C90638F236DE65F00281145 /* Interactor */,
 				F8114FBF22A3E5D500102830 /* Presenter */,
 				5C906390236DE6BC00281145 /* Router */,
 				5C7BD992236864D5008E2F63 /* Builder */,
