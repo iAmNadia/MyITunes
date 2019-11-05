@@ -19,10 +19,19 @@ public struct ITunesSong: Codable {
     // MARK: - Codable
     
     private enum CodingKeys: String, CodingKey {
-        case trackName = "trackName"
-        case artistName = "artistName"
+        case trackName =      "trackName"
+        case artistName =     "artistName"
         case collectionName = "collectionName"
-        case artwork = "artworkUrl100"
+        case artwork =        "artworkUrl100"
+        case artistViewUrl =  "artistViewUrl"
+    }
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.trackName = try container.decode(String.self, forKey: .trackName)
+        self.artistName = try? container.decode(String.self, forKey: .artistName)
+        self.collectionName = try? container.decode(String.self, forKey: .collectionName)
+        self.artistViewUrl = try? container.decode(String.self, forKey: .artistViewUrl)
+        self.artwork = try? container.decode(String.self, forKey: .artwork)
     }
     
     // MARK: - Init
@@ -30,10 +39,12 @@ public struct ITunesSong: Codable {
     internal init(trackName: String,
                   artistName: String?,
                   collectionName: String?,
-                  artwork: String?) {
+                  artwork: String?,
+                  artistViewUrl: String?) {
         self.trackName = trackName
         self.artistName = artistName
         self.collectionName = collectionName
         self.artwork = artwork
+        self.artistViewUrl = artistViewUrl
     }
 }
